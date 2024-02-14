@@ -5,8 +5,8 @@ public class barchart  extends PApplet{
     float x =50;
     float y=200;
     
-    float[] values = {50,220,70,110,200,400,50,220,70,110,200,400};
-    String[] fruit = {"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Nov","Dec"};
+    float[] values = {200, 260, 300, 150, 100, 50, 10, 40, 67, 160, 400, 420};
+    String[] month = {"JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"};
    
     public void settings()
 	{
@@ -25,6 +25,12 @@ public class barchart  extends PApplet{
         strokeCap(SQUARE);
         textAlign(CENTER);
         textSize(24);
+        for (int u = 0; u <= 120; u += 10) {
+            textAlign(RIGHT);
+            textSize(24);
+            text(u, 40, map(u, 0, 150, 480, 0) + 10);
+           
+          }
         for(int i=0; i<11; i++) {
           float x = 80 + i * 50; // Adjust spacing between months
           strokeWeight(5);
@@ -37,11 +43,11 @@ public class barchart  extends PApplet{
           line(50, 0, 50, 500);
           stroke(255,0,255);
           strokeWeight(40);
-          float y = map(values[i], 0, 400, 500, height/2); //
+          float y = map(values[i], 0, 400, 500, height/2); 
        
           line(x, 500, x, y);
           
-          text(fruit[i], x, 540);
+          text(month[i], x, 540);
         }
 
     }
