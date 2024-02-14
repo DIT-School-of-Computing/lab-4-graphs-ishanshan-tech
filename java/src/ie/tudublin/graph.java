@@ -11,8 +11,14 @@ public class graph extends PApplet{
     }
     public void draw()
     {
-        float offsetX = 50; // Offset from the left side of the canvas
-        float offsetY = height - 50; // Offset from the bottom of the canvas
+        background(255); // Clear the background to white
+        for (int u = 0; u <= 120; u += 10) {
+            textAlign(RIGHT);
+            textSize(24);
+            text(u, 40, map(u, 0, 120, height - 50, 50) + 10); // Map y-axis labels vertically
+        }
+        float offsetX = 50; 
+        float offsetY = height - 50; 
         
         // Draw axes
         stroke(0);
@@ -30,17 +36,17 @@ public class graph extends PApplet{
           // Draw point
           point(currentX, currentY);
           
-          // Draw label for the fruit
+
           textAlign(CENTER);
           fill(0);
           text(fruit[i], currentX, offsetY + 20);
           
-          // Draw lines connecting the points
+
           if (i > 0) {
             line(x, y, currentX, currentY);
           }
           
-          // Update coordinates for the next point
+         
           x = currentX;
           y = currentY;
         }
