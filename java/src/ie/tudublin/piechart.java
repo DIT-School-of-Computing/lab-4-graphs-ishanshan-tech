@@ -20,6 +20,7 @@ public class piechart extends PApplet{
       void pieChart(float diameter, int[] data) {
         float lastAngle = 0;
         for (int i = 0; i < data.length; i++) {
+            
           
           fill(random(0,255),random(0,255),random(0,255));
           arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(data[i]));
