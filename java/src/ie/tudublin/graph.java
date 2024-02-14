@@ -3,7 +3,7 @@ import processing.core.PApplet;
 public class graph extends PApplet{
     float x = 50; // Initial x-coordinate for the graph
     float y = 0; // Initial y-coordinate for the graph
-    float[] values = {50, 220, 70, 110, 200, 400, 50, 220, 70, 110, 200, 400};
+    float[] values = {200, 260, 300, 150, 100, 50, 10, 40, 67, 160, 400, 420};
     String[] fruit = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec"};
     public void settings()
     {
