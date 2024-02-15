@@ -7,7 +7,7 @@ public class graph extends PApplet{
     String[] fruit = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Nov", "Dec"};
     public void settings()
     {
-        size(800, 400);
+        size(500,500);
     }
     public void draw()
     {
